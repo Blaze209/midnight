@@ -8,6 +8,7 @@ interface ISetterRatifier is IRatifier {
     /// ERRORS ///
     error InvalidProof();
     error Unauthorized();
+    error NotMidnight();
     error NotRatified();
 
     /// EVENTS ///

@@ -17,6 +17,7 @@ interface IEcrecoverRatifier is IRatifier {
     /// ERRORS ///
     error InvalidProof();
     error InvalidSignature();
+    error NotMidnight();
     error RootCanceled();
     error Unauthorized();
 
