@@ -229,7 +229,7 @@ contract EcrecoverRatifierIntegrationTest is BaseTest {
         uint256 price = TickLib.tickToPrice(lenderOffer.tick);
         deal(address(loanToken), lender, units.mulDivDown(price, WAD));
         collateralize(market, borrower, units);
-        lenderOffer.maxUnits = type(uint256).max;
+        lenderOffer.maxUnits = units;
 
         vm.prank(borrower);
         midnight.take(
@@ -250,7 +250,7 @@ contract EcrecoverRatifierIntegrationTest is BaseTest {
         uint256 price = TickLib.tickToPrice(lenderOffer.tick);
         deal(address(loanToken), lender, units.mulDivDown(price, WAD));
         collateralize(market, borrower, units);
-        lenderOffer.maxUnits = type(uint256).max;
+        lenderOffer.maxUnits = units;
 
         Offer memory offer0 = lenderOffer;
 
